@@ -1,0 +1,45 @@
+CREATE TABLE IF NOT EXISTS public."transactions"
+(
+    company_code text COLLATE pg_catalog."default" NOT NULL,
+    "doc_No" text COLLATE pg_catalog."default" NOT NULL,
+    plant text COLLATE pg_catalog."default" NOT NULL,
+    ship_point text COLLATE pg_catalog."default",
+    store_location text COLLATE pg_catalog."default",
+    sales_order_item bigint NOT NULL,
+    doc_category "char" NOT NULL,
+    doc_type text COLLATE pg_catalog."default" NOT NULL,
+    bill_to_party text COLLATE pg_catalog."default" NOT NULL,
+    payer text COLLATE pg_catalog."default" NOT NULL,
+    ship_to text COLLATE pg_catalog."default" NOT NULL,
+    sold_to text COLLATE pg_catalog."default",
+    mat_sales text COLLATE pg_catalog."default",
+    distribution_channel text COLLATE pg_catalog."default" NOT NULL,
+    division text COLLATE pg_catalog."default" NOT NULL,
+    sale_organization text COLLATE pg_catalog."default" NOT NULL,
+    bill_category text COLLATE pg_catalog."default" NOT NULL,
+    bill_type text COLLATE pg_catalog."default" NOT NULL,
+    item_category text COLLATE pg_catalog."default" NOT NULL,
+    account_assignment_group text COLLATE pg_catalog."default",
+    cancelled boolean NOT NULL,
+    bpo_stat "char",
+    bill_item bigint NOT NULL,
+    creation_date date NOT NULL,
+    price_date date NOT NULL,
+    jalali_date text COLLATE pg_catalog."default" NOT NULL,
+    "bill_No" text COLLATE pg_catalog."default" NOT NULL,
+    cal_date date NOT NULL,
+    base_unit text COLLATE pg_catalog."default",
+    doc_currency text COLLATE pg_catalog."default" NOT NULL,
+    sale_unit text COLLATE pg_catalog."default",
+    bill_quantity numeric NOT NULL,
+    exchange_rate numeric NOT NULL,
+    tax numeric NOT NULL,
+    subtot5 numeric NOT NULL,
+    subtot6 numeric NOT NULL,
+    hierarchys text COLLATE pg_catalog."default" NOT NULL
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Transaction"
+    OWNER to postgres;
